@@ -1,0 +1,13 @@
+VS_coding/
+
+# Ignore Vivado temporary and generated project folders
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Ignore Vivado log and journal files at the project root
+*.log
+*.jou
+*.str
