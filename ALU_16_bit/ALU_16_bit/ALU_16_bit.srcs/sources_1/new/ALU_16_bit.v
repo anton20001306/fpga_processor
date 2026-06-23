@@ -26,13 +26,16 @@
 // A,B -> Operands (16 bit)
 // ALU_OUT -> Result (16 bit)
 
-module ALU_16_bit(
+module ALU_16bit(
 input wire reset, // Used to reset operands
 input wire clk, // Setting clk
 input wire[15:0] sw, // Physical slide switches | Use to set operand values
 input wire BTNC, // Sets for Operand A
 input wire BTNU, // Sets for Operand B
+input wire BTNL, // For op code
 output reg[15:0] out,
+output reg[15:0] opd_A, // Operand A | Separately represented as output to display in 7segment display
+output reg[15:0] opd_B, // Operand B | Separately represented as output to display in 7segment display
 output reg Carry_flag, // Carry flag set
 output reg Arith, Logic, Cmp, Shift, // Used to represent the type of operations | Setting flags
 output reg ALU_ready // Tells the processor the ALU is done
@@ -60,8 +63,8 @@ parameter L_shift = 4'b1110; // Only opd_A (A)
 wire [31:0] div_result; // Holds both quotient and remainder
 wire div_valid; // Goes high when division is complete
 reg div_start; // Reg to tell IP Core (division) to start
-reg [15:0] opd_A = 16'b0; // Operand A
-reg [15:0] opd_B = 16'b0; // Operand B
+//reg [15:0] opd_A = 16'b0; // Operand A
+//reg [15:0] opd_B = 16'b0; // Operand B
 reg [3:0] op_code = 4'b0; // 4 bit opcode with 15 operations (ALU_FUN)
 
 // Instantiating IP Core for Division
@@ -86,7 +89,7 @@ always @(posedge clk or posedge reset) begin
 
     else if(BTNC) opd_A <= sw;
     else if(BTNU) opd_B <= sw;
-    else op_code <= sw[3:0];
+    else if(BTNL) op_code <= sw[3:0];
     
 end
 
