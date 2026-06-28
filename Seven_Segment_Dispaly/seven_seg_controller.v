@@ -81,7 +81,7 @@ module seven_seg_controller(
   reg[19:0] refresh_counter; // Clock divider, high refresh rate
 
   // Clock adjustment with reset
-  always @(posedge clk_i or posedge rstn_i)
+  always @(posedge clk_i or negedge rstn_i)
   begin
     if(!rstn_i)
     begin

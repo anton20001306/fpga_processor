@@ -1,0 +1,136 @@
+<mxfile host="65bd71144e">
+    <diagram id="seven_seg_wiring" name="Seven_Segment_Display">
+        <mxGraphModel dx="1980" dy="3365" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1438" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Seven-Segment Display — Wiring Diagram&#xa;FPGA: NEXYS A7 100T   •   Vivado 2024.1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1B2A4A;strokeColor=none;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=26;fontStyle=1;spacingTop=4;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="30" width="1320" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="sw_grp" value="INPUTS&#xa;SWITCH[3:0] — Slide Switches" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#2D6CDF;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#1B2A4A;spacingTop=10;arcSize=5;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="235" width="240" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="sw0" value="SWITCH[0]   •   PIN J15" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2D6CDF;fontSize=14;fontColor=#1B2A4A;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="82" y="298" width="196" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="sw1" value="SWITCH[1]   •   PIN L16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2D6CDF;fontSize=14;fontColor=#1B2A4A;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="82" y="358" width="196" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="sw2" value="SWITCH[2]   •   PIN M13" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2D6CDF;fontSize=14;fontColor=#1B2A4A;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="82" y="418" width="196" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="sw3" value="SWITCH[3]   •   PIN R15" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2D6CDF;fontSize=14;fontColor=#1B2A4A;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="82" y="478" width="196" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="top" value="top_module" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F6FC;strokeColor=#1B2A4A;verticalAlign=top;fontStyle=1;fontSize=22;fontColor=#1B2A4A;spacingTop=14;arcSize=3;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="190" width="340" height="490" as="geometry"/>
+                </mxCell>
+                <mxCell id="decoder" value="decoder  seven_segment&#xa;&#xa;Combinational  BCD → 7-segment&#xa;always @(*) case(SWITCH)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2D6CDF;verticalAlign=middle;fontStyle=1;fontSize=17;fontColor=#1B2A4A;spacingLeft=8;spacingRight=8;arcSize=6;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="516" y="250" width="288" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="an_assign" value="assign AN = 8&#39;b1111_1110;&#xa;&#xa;Only digit 0 enabled (active-low)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2D6CDF;verticalAlign=middle;fontStyle=1;fontSize=16;fontColor=#1B2A4A;spacingLeft=8;spacingRight=8;arcSize=6;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="516" y="585" width="288" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_in" value="SWITCH&#xa;[3:0]" style="shape=mxgraph.electrical.miscellaneous.in_pin;html=1;fillColor=#FFFFFF;strokeColor=#1B2A4A;fontSize=11;fontColor=#1B2A4A;" parent="1" vertex="1">
+                    <mxGeometry x="452" y="392" width="64" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="seg_grp" value="OUTPUTS — 7-Seg Cathodes (active-low)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4F1;strokeColor=#0E7C7B;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#0A4F4E;spacingTop=10;arcSize=5;" parent="1" vertex="1">
+                    <mxGeometry x="1100" y="205" width="260" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="ca" value="CA   —   PIN T10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0E7C7B;fontSize=14;fontColor=#0A4F4E;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1122" y="262" width="216" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb" value="CB   —   PIN R10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0E7C7B;fontSize=14;fontColor=#0A4F4E;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1122" y="307" width="216" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="cc" value="CC   —   PIN K16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0E7C7B;fontSize=14;fontColor=#0A4F4E;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1122" y="352" width="216" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="cd" value="CD   —   PIN K13" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0E7C7B;fontSize=14;fontColor=#0A4F4E;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1122" y="397" width="216" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="ce" value="CE   —   PIN P15" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0E7C7B;fontSize=14;fontColor=#0A4F4E;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1122" y="442" width="216" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="cf" value="CF   —   PIN T11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0E7C7B;fontSize=14;fontColor=#0A4F4E;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1122" y="487" width="216" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="cg" value="CG   —   PIN L18" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0E7C7B;fontSize=14;fontColor=#0A4F4E;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1122" y="532" width="216" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="an_grp" value="AN[7:0] — Anode Enables (active-low)&#xa;PINS  J17 J18 T9 J14 P14 T14 K2 U13" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D8ECEA;strokeColor=#0E7C7B;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#0A4F4E;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="1100" y="600" width="260" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="footer" value="Engineer: W.A.P.N. Fernando   •   Project: Seven_Segment_Display   •   Target: NEXYS A7 100T" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontSize=12;fontStyle=2;fontColor=#5A6B85;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="786" width="1300" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2.5;strokeColor=light-dark(#0e7b7c, #ededed);exitX=0.987;exitY=0.796;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="decoder" target="cf">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="772" y="414" as="sourcePoint"/>
+                        <mxPoint x="870" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="w_sw0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2D6CDF;strokeWidth=2.5;endArrow=block;" parent="1" source="sw0" target="dec_in" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_sw1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2D6CDF;strokeWidth=2.5;endArrow=block;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="sw1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="182" y="372" as="sourcePoint"/>
+                        <mxPoint x="447" y="386" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="452" y="382"/>
+                            <mxPoint x="452" y="386"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="w_sw2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2D6CDF;strokeWidth=2.5;endArrow=block;" parent="1" source="sw2" target="dec_in" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_sw3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2D6CDF;strokeWidth=2.5;endArrow=block;" parent="1" source="sw3" target="dec_in" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_buslabel" value="4-bit bus" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontStyle=2;fontColor=#2D6CDF;" parent="1" vertex="1">
+                    <mxGeometry x="345" y="372" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_cb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0E7C7B;strokeWidth=2.5;endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="cb" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="800" y="320" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="w_cc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0E7C7B;strokeWidth=2.5;endArrow=block;exitX=0.993;exitY=0.387;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="decoder" target="cc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_cd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0E7C7B;strokeWidth=2.5;endArrow=block;exitX=1.001;exitY=0.535;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="decoder" target="cd" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_ce" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0E7C7B;strokeWidth=2.5;endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="ce" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="805" y="461" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="w_cg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0E7C7B;strokeWidth=2.5;endArrow=block;exitX=1;exitY=0.948;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="w_an" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0E7C7B;strokeWidth=2.5;endArrow=block;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="an_assign" target="an_grp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;html=1;exitX=0.992;exitY=0.106;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;strokeColor=light-dark(#0e7b7c, #ededed);strokeWidth=2.5;" edge="1" parent="1" source="decoder" target="ca">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="820" y="340" as="sourcePoint"/>
+                        <mxPoint x="870" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=0.997;exitY=0.868;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2.5;strokeColor=light-dark(#0e7b7c, #ededed);" edge="1" parent="1" source="decoder" target="cg">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="820" y="340" as="sourcePoint"/>
+                        <mxPoint x="870" y="290" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="930" y="519"/>
+                            <mxPoint x="930" y="551"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

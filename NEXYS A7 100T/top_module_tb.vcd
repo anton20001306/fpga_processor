@@ -1,0 +1,277 @@
+$date
+	Mon Jun 29 02:25:02 2026
+$end
+$version
+	Questa Altera Starter FPGA Edition Version 2025.2
+$end
+$timescale
+	1ps
+$end
+
+$scope module top_module_tb $end
+$var reg 4 ! SWITCH [3:0] $end
+$var wire 1 " CA $end
+$var wire 1 # CB $end
+$var wire 1 $ CC $end
+$var wire 1 % CD $end
+$var wire 1 & CE $end
+$var wire 1 ' CF $end
+$var wire 1 ( CG $end
+$var wire 1 ) AN [7] $end
+$var wire 1 * AN [6] $end
+$var wire 1 + AN [5] $end
+$var wire 1 , AN [4] $end
+$var wire 1 - AN [3] $end
+$var wire 1 . AN [2] $end
+$var wire 1 / AN [1] $end
+$var wire 1 0 AN [0] $end
+$var integer 32 1 i $end
+$var wire 1 2 CATHODES [6] $end
+$var wire 1 3 CATHODES [5] $end
+$var wire 1 4 CATHODES [4] $end
+$var wire 1 5 CATHODES [3] $end
+$var wire 1 6 CATHODES [2] $end
+$var wire 1 7 CATHODES [1] $end
+$var wire 1 8 CATHODES [0] $end
+
+$scope module dut $end
+$var wire 1 9 SWITCH [3] $end
+$var wire 1 : SWITCH [2] $end
+$var wire 1 ; SWITCH [1] $end
+$var wire 1 < SWITCH [0] $end
+$var wire 1 " CA $end
+$var wire 1 # CB $end
+$var wire 1 $ CC $end
+$var wire 1 % CD $end
+$var wire 1 & CE $end
+$var wire 1 ' CF $end
+$var wire 1 ( CG $end
+$var wire 1 ) AN [7] $end
+$var wire 1 * AN [6] $end
+$var wire 1 + AN [5] $end
+$var wire 1 , AN [4] $end
+$var wire 1 - AN [3] $end
+$var wire 1 . AN [2] $end
+$var wire 1 / AN [1] $end
+$var wire 1 0 AN [0] $end
+
+$scope module seven_segment $end
+$var wire 1 9 SWITCH [3] $end
+$var wire 1 : SWITCH [2] $end
+$var wire 1 ; SWITCH [1] $end
+$var wire 1 < SWITCH [0] $end
+$var reg 1 = CA $end
+$var reg 1 > CB $end
+$var reg 1 ? CC $end
+$var reg 1 @ CD $end
+$var reg 1 A CE $end
+$var reg 1 B CF $end
+$var reg 1 C CG $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+0=
+0>
+0?
+0@
+0A
+0B
+1C
+b0 1
+0"
+0#
+0$
+0%
+0&
+0'
+1(
+00
+1/
+1.
+1-
+1,
+1+
+1*
+1)
+18
+07
+06
+05
+04
+03
+02
+0<
+0;
+0:
+09
+$end
+#20000
+b1 1
+b1 !
+1<
+1B
+1A
+1@
+1=
+1'
+1&
+1%
+1"
+17
+16
+15
+12
+#40000
+b10 1
+b10 !
+0<
+1;
+0C
+0A
+0@
+1?
+0=
+0(
+0&
+0%
+1$
+0"
+08
+06
+05
+14
+02
+#60000
+b11 1
+b11 !
+1<
+1A
+0?
+1&
+0$
+16
+04
+#80000
+b100 1
+b100 !
+0<
+0;
+1:
+0B
+1@
+1=
+0'
+1%
+1"
+07
+15
+12
+#100000
+b101 1
+b101 !
+1<
+0@
+1>
+0=
+0%
+1#
+0"
+05
+13
+02
+#120000
+b110 1
+b110 !
+0<
+1;
+0A
+0&
+06
+#140000
+b111 1
+b111 !
+1<
+1C
+1B
+1A
+1@
+0>
+1(
+1'
+1&
+1%
+0#
+18
+17
+16
+15
+03
+#160000
+b1000 1
+b1000 !
+0<
+0;
+0:
+19
+0C
+0B
+0A
+0@
+0(
+0'
+0&
+0%
+08
+07
+06
+05
+#180000
+b1001 1
+b1001 !
+1<
+1A
+1&
+16
+#200000
+b1010 1
+b1010 !
+0<
+1;
+0A
+1?
+1>
+0&
+1$
+1#
+06
+14
+13
+#220000
+b1011 1
+b1011 !
+1<
+#240000
+b1100 1
+b1100 !
+0<
+0;
+1:
+#260000
+b1101 1
+b1101 !
+1<
+#280000
+b1110 1
+b1110 !
+0<
+1;
+#300000
+b1111 1
+b1111 !
+1<
+#320000
+b10000 1

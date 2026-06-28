@@ -25,18 +25,18 @@ module ALU(
   begin
     if (!rstn_i)
     begin
-      ALU_OUT_c <= 16'b0;
-      Carry_Flag_c <= 1'b0;
-      Arith_Flag_c <= 1'b0;
-      Logic_flag_c <= 1'b0;
-      CMP_Flag_c <= 1'b0;
-      Shift_Flag_c <=1'b0;
+      ALU_OUT <= 16'b0;
+      Carry_Flag <= 1'b0;
+      Arith_Flag <= 1'b0;
+      Logic_flag <= 1'b0;
+      CMP_Flag <= 1'b0;
+      Shift_Flag <=1'b0;
     end
     else
     begin
       ALU_OUT <= ALU_OUT_c;
       Carry_Flag <= Carry_Flag_c;
-      Arith_Flag <= Arith_Flag;
+      Arith_Flag <= Arith_Flag_c;
       Logic_flag <= Logic_flag_c;
       CMP_Flag <= CMP_Flag_c;
       Shift_Flag <= Shift_Flag_c;
@@ -49,9 +49,9 @@ module ALU(
     ALU_OUT_c = 16'b0;  // avoid unintentinal latch
     Carry_Flag_c = 1'b0;
     Arith_Flag_c = 1'b0;
-    Logic_flag = 1'b0;
-    CMP_Flag = 1'b0;
-    Shift_Flag = 1'b0;
+    Logic_flag_c = 1'b0;
+    CMP_Flag_c = 1'b0;
+    Shift_Flag_c = 1'b0;
     case (ALU_FUN)
 
       4'b0000:
