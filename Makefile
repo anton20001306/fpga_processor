@@ -9,7 +9,7 @@
 #
 #  2) OVERRIDE on the command line (nothing to edit) - point it
 #     at any project's files:
-#         make gui SRC_DIR=Seven_Segment_Dispaly \
+#         make gui SRC_DIR=NEXYS_A7_100T/Seven_Segment_Dispaly \
 #                  RTL_SRCS="top_module.v decoder.v" \
 #                  TB_SRC=top_module_tb.v \
 #                  TB_TOP=top_module_tb
@@ -24,7 +24,7 @@
 #  TB_SRC   : testbench file
 #  TB_TOP   : testbench MODULE name (top of the simulation)
 # ------------------------------------------------------------
-SRC_DIR  ?= Seven_Segment_Dispaly
+SRC_DIR  ?= NEXYS_A7_100T/Seven_Segment_Dispaly
 RTL_SRCS ?= top_module.v decoder.v
 TB_SRC   ?= top_module_tb.v
 TB_TOP   ?= top_module_tb
