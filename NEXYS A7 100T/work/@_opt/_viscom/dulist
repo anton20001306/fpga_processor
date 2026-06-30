@@ -1,3 +1,0 @@
-1 7 decoder 4 fast 60 /home/anton/fpga_processor/fpga_processor/NEXYS A7 100T/work 0 0 180224 0 121 0
-1 10 top_module 4 fast 60 /home/anton/fpga_processor/fpga_processor/NEXYS A7 100T/work 0 0 0 0 29 0
-1 13 top_module_tb 4 fast 60 /home/anton/fpga_processor/fpga_processor/NEXYS A7 100T/work 0 0 0 0 88 0
