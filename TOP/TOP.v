@@ -3,6 +3,7 @@ module TOP(
     input  wire rstn_i,
     input  wire btnc_i,
     input  wire btnu_i,
+    input  wire btnd_i,
     input  wire [15:0] switch_i,
 
     output wire  [6:0] seven_segment_o,
@@ -44,39 +45,40 @@ module TOP(
     begin
       B_reg <= switch_i;
     end
-    else
+    else if (btnd_i)
     begin
       ALU_FUN_reg <= switch_i[3:0];
     end
 
   end
 
-  ALU u_alu(
-        .A(A_reg),
-        .B(B_reg),
-        .ALU_FUN(ALU_FUN_reg),
-        .clk_i(clk_i),
-        .rstn_i(rstn_i),
-        .Carry_Flag(carry),
-        .Arith_Flag(arith),
-        .Logic_flag(Logic),
-        .CMP_Flag(comapre),
-        .Shift_Flag(shift),
-        .ALU_OUT(alu_out)
-      );
 
-  seven_seg_controller u_seg(
+ALU u_alu(
+      .A(A_reg),
+      .B(B_reg),
+      .ALU_FUN(ALU_FUN_reg),
+      .clk_i(clk_i),
+      .rstn_i(rstn_i),
+      .Carry_Flag(carry),
+      .Arith_Flag(arith),
+      .Logic_flag(Logic),
+      .CMP_Flag(comapre),
+      .Shift_Flag(shift),
+      .ALU_OUT(alu_out)
+    );
 
-                         .clk_i(clk_i),
-                         .rstn_i(rstn_i),
-                         .opd_A(A_reg),
-                         .opd_B(B_reg),
-                         .out(alu_out),
-                         .seg(seven_segment_o),
-                         .dp(decimal_point_o),
-                         .an(anode_o)
+seven_seg_controller u_seg(
 
-                       );
+                       .clk_i(clk_i),
+                       .rstn_i(rstn_i),
+                       .opd_A(A_reg),
+                       .opd_B(B_reg),
+                       .out(alu_out),
+                       .seg(seven_segment_o),
+                       .dp(decimal_point_o),
+                       .an(anode_o)
+
+                     );
 
 endmodule
 
