@@ -2,13 +2,13 @@
 //----------------------------------------------------------------------//
 // File        : seven_seg_controller.v
 // Project     : FPGA_processor
-// Author      : Name
+// Author      : Epaladeniya J.H.A.D.C
 // Date        : 2026-07-02
 // Description : Multiplexed 8-digit 7-segment display controller
 // -----------------------------------------------------------------------
 // Revision History:
 //   Rev  Date        Author        Description
-//   0.1  2026-06-20  Name          File Created
+//   0.1  2026-06-20  Epaladeniya J.H.A.D.C  File Created
 //----------------------------------------------------------------------//
 
 module seven_seg_controller(
